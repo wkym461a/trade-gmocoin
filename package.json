@@ -1,0 +1,33 @@
+{
+  "name": "trade-gmocoin",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build:btc": "node esbuild-btc.js",
+    "exec:btc": "node dist/btc.bundle.js",
+    "start:btc": "run-s build:btc exec:btc",
+
+    "build:eth": "node esbuild-eth.js",
+    "exec:eth": "node dist/eth.bundle.js",
+    "start:eth": "run-s build:eth exec:eth",
+
+    "build:xrp": "node esbuild-xrp.js",
+    "exec:xrp": "node dist/xrp.bundle.js",
+    "start:xrp": "run-s build:xrp exec:xrp"
+  },
+  "keywords": [],
+  "author": "wkym461a",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.2.0",
+    "esbuild": "^0.23.0",
+    "npm-run-all": "^4.1.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "gmocoinapi": "^1.2.1",
+    "tslib": "^2.6.3"
+  }
+}
